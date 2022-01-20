@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syne</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <!-- jQuery 3.5.1 library -->
+    <script src="jquery/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS 1.16.1 -->
+    <script src="popper/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      body {
+        background-color: #1875BB;
+      }
+      .login-container {
+        height: 100vh;
+        width: 100vw;
+        background-image: url('assets/Login-bg.png');
+        background-repeat: no-repeat;
+        background-position: 25% 40%;
+        border: 0px;
+        margin: 0px;
+        display: flex;
+      }
+      .login-form {
+        border-radius: 24px;
+        background-color: white;
+        margin-right: 5%;
+        padding: 20px 3% 5px 3%;
+        min-width: 432px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <form class="needs-validation my-auto ml-auto login-form" novalidate>
+        <div class="form-row mb-3">
+          <img src="assets/syne-logo.svg" alt="syne logo" class="mx-auto" />
+        </div>
+        <div class="form-group mb-3">
+          <label for="validationCustom01">Email / Username</label>
+          <input type="email" class="form-control bg-light b-0" id="validationCustom01" value="Mark" required>
+          <div class="invalid-feedback">
+            Email is not existing
+          </div>
+        </div>
+        <div class="form-group mb-0">
+          <label for="validationCustom02">Passowrd</label>
+          <input type="text" class="form-control bg-light b-0" id="validationCustom02" value="Otto" required>
+          <div class="invalid-feedback">
+            Password not match
+          </div>
+        </div>
+        <div class="form-row mb-3">
+          <div class="col text-right text-secondary">
+            <p>Forget your Password?</p>
+          </div>
+        </div>
+        <div class="form-row">
+          <button class="btn btn-primary mx-auto" type="submit">Login</button>
+        </div>
+      </form>
+      
+      <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
+    </div>
+  </body>
+</html>
