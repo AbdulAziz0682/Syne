@@ -1,0 +1,32 @@
+
+.login-container {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('assets/Login-bg.png');
+  background-repeat: no-repeat;
+  background-position: 25% 40%;
+  border: 0px;
+  margin: 0px;
+  display: flex;
+}
+.login-form {
+  border-radius: 24px;
+  background-color: white;
+  padding: 20px 3% 5px 3%;
+  min-height: 490px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 0px) { /* For small screens */
+  .login-form {
+    min-width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+  }        
+}
+@media screen and (min-width: 748px) { /* For medium screens */ 
+  .login-form {
+    min-width: 430px;
+    margin-right: 5%;
+  }
+}
