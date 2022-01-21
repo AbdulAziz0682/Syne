@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syne</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <!-- jQuery 3.5.1 library -->
+    <script src="jquery/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS 1.16.1 -->
+    <script src="popper/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  </head>
+  <body>
+    <!--Nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue py-0">
+      <a class="navbar-brand" href="#"><img src="assets/navbar-brand.svg" alt="brand" /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav w-100 font-weight-bold" style="gap: 1.5rem;">
+          <li class="nav-item">
+            <!--For active menu, bottom border and small padding are added-->
+            <a class="nav-link border-bottom pb-1" href="quotations.html">Quote <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Invoice</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Products</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+              Configuration
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <!--For extra space-->
+          <li class="flex-grow-1"></li>
+          <!------------------->
+          <li class="nav-item dropdown">
+            <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-cog"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Nav bar end-->
+    <div class="row mx-5 my-3 form-inline">
+      <!--Heading-->
+      <div class="col-2">
+        <h1 class="font-weight-bold text-secondary">Quotations</h1>
+      </div>
+      <!----------->
+      <!--Input group-->
+      <div class="col-3">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+          <div class="input-group-append" id="button-addon4">
+            <button class="btn btn-primary" type="button">
+              <!--Search Icon-->
+              <i class="fas fa-search"></i>
+              Search
+            </button>
+            <button class="btn btn-outline-secondary" type="button">Advanced</button>
+          </div>
+        </div>
+      </div>
+      <!--Input group end-->
+      <!--Records dropdown-->
+      <div class="col-1">
+        <div class="btn-group">
+          <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            All Records
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </div>
+      </div>
+      <!--Records dropdown end-->
+      <div class="col-2">
+        <div class="d-flex align-items-center" style="gap: 1.5rem">
+          <!--Calendar Icon-->
+          <i class="fas fa-calendar-alt" style="font-size: 1.5rem;"></i>
+          <!--Date input-->
+          <input type="date" class="form-control" />
+        </div>
+      </div>
+      <!--Other Buttons-->
+      <div class="flex-grow-1"></div>
+      <div class="row">
+        <div class="col">
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-external-link-alt"></i>
+              Export
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-file-pdf"></i>
+              Quick PDF
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-danger" data-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-file-pdf"></i>
+            View
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
