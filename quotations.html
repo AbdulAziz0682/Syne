@@ -79,91 +79,112 @@
       </div>
     </nav>
     <!--Nav bar end-->
-    <div class="row mx-5 my-3 form-inline">
-      <!--Heading-->
-      <div class="col-2">
-        <h1 class="font-weight-bold text-secondary">Quotations</h1>
-      </div>
-      <!----------->
-      <!--Input group-->
-      <div class="col-3">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
-          <div class="input-group-append" id="button-addon4">
-            <button class="btn btn-primary" type="button">
-              <!--Search Icon-->
-              <i class="fas fa-search"></i>
-              Search
-            </button>
-            <button class="btn btn-outline-secondary" type="button">Advanced</button>
-          </div>
+    <!--Container start-->
+    <div class="container-fluid form-inline my-3">
+      <!--Container Row Start-->
+      <div class="row w-100 align-items-end mx-0 no-gutters">
+        <!--Heading start-->
+        <div class="col-12 col-lg-2 col-xl-2">
+          <h4 class="font-weight-bold text-secondary">Quotation</h4>
         </div>
-      </div>
-      <!--Input group end-->
-      <!--Records dropdown-->
-      <div class="col-1">
-        <div class="btn-group">
-          <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            All Records
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </div>
-      </div>
-      <!--Records dropdown end-->
-      <div class="col-2">
-        <div class="d-flex align-items-center" style="gap: 1.5rem">
-          <!--Calendar Icon-->
-          <i class="fas fa-calendar-alt" style="font-size: 1.5rem;"></i>
-          <!--Date input-->
-          <input type="date" class="form-control" />
-        </div>
-      </div>
-      <!--Other Buttons-->
-      <div class="flex-grow-1"></div>
-      <div class="row">
-        <div class="col">
-          <div class="btn-group">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-              <i class="fas fa-external-link-alt"></i>
-              Export
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+        <!--Heading end-->
+        <!--Controls start-->
+        <div class="col-12 col-lg-10 col-xl-10">
+          <!--Controls inner row start-->
+          <div class="row mx-0 no-gutters">
+            <!--Input group-->
+            <div class="col-12 col-md-9 pt-2 col-lg-7 col-xl-5 pr-2">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+                <div class="input-group-append" id="button-addon4">
+                  <button class="btn btn-primary" type="button">
+                    <!--Search Icon-->
+                    <i class="fas fa-search"></i>
+                    Search
+                  </button>
+                  <button class="btn btn-outline-secondary" type="button">Advanced</button>
+                </div>
+              </div>
+            </div>
+            <!--Input group end-->
+            <!--Records dropdown-->
+            <div class="col-5 col-md-3 col-lg-2 col-xl-2 pt-2 d-md-flex d-lg-block justify-content-end">
+              <div class="btn-group">
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  All Records
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+              </div>
+            </div>
+            <!--Records dropdown end-->
+            <div class="col-7 col-md-4 pt-2 col-lg-2 col-xl-1">
+              <div class="d-flex justify-content-end align-items-center" style="gap: 0.5rem">
+                <!--Calendar Icon-->
+                <i class="fas fa-calendar-alt" style="font-size: 1rem;"></i>
+                <!--Date input-->
+                <input type="text" class="form-control" style="width: 90%;" />
+              </div>
+            </div>
+            <!--Other Buttons visible only on lg screen-->
+            <div class="col-lg-1 d-none pt-2 d-lg-flex justify-content-end d-xl-none">
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-expanded="false">
+                  :
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <button class="dropdown-item text-white bg-secondary">Export</button>
+                  <button class="dropdown-item text-white bg-danger">Quick PDF</button>
+                  <button class="dropdown-item text-white bg-danger">View</button>
+                </div>
+              </div>
+            </div>
+            <!--Other Buttons hidden only on lg screen-->
+            <div class="col-12 col-md-8 pt-2 d-flex d-lg-none d-xl-flex justify-content-end col-xl-4" style="gap: 0.5rem;">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-external-link-alt"></i>
+                    Export
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-file-pdf"></i>
+                    Quick PDF
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-danger" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-file-pdf"></i>
+                  View
+                </button>
+              </div>
             </div>
           </div>
+          <!--Controls inner row end-->
         </div>
-        <div class="col-4">
-          <div class="btn-group">
-            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-              <i class="fas fa-file-pdf"></i>
-              Quick PDF
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <button type="button" class="btn btn-danger" data-toggle="dropdown" aria-expanded="false">
-            <i class="fas fa-file-pdf"></i>
-            View
-          </button>
-        </div>
+        <!--Controls end-->
       </div>
+      <!--Container Row end-->
     </div>
+    <!--Container End-->
   </body>
 </html>
