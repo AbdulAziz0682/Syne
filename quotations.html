@@ -16,6 +16,38 @@
     <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!--Font Awesome Icons-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+      /* Page specific styles */
+      body {
+        height: 100vh;
+        border: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .bg-blue {
+        background-color: #1D6598;
+        color: white;
+      }
+      .bg-violet {
+        background: rgba(202, 84, 168, 1);
+        color: white;
+      }
+      .bg-brown {
+        background: rgba(153, 152, 104, 1);
+        color: white;
+      }
+      .side-bar-btn {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .side-bar-btn-icon {
+        width: 18px;
+        height: 18px;
+      }
+    </style>
   </head>
   <body>
     <!--Nav bar-->
@@ -186,5 +218,39 @@
       <!--Container Row end-->
     </div>
     <!--Container End-->
+    <!--Page content container-->
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <!--Side bar start-->
+        <div class="col-2 border rounded">
+          <div class="d-flex flex-column p-2" style="gap: 0.75rem;">
+            <button class="btn btn-sm btn-primary w-100">+ Add New Quote</button>
+            <br />
+            <button class="btn btn-sm btn-secondary side-bar-btn">
+              <span>Draft</span>
+              <img src="assets/check-square.svg" alt="check" class="side-bar-btn-icon" />
+            </button>
+            <button class="btn btn-sm btn-primary side-bar-btn">
+              <span>Sent</span>
+              <img src="assets/check-square.svg" alt="check" class="side-bar-btn-icon" />
+            </button>
+            <button class="btn btn-sm btn-success side-bar-btn">
+              <span>Accepted</span>
+              <img src="assets/check-square.svg" alt="check" class="side-bar-btn-icon" />
+            </button>
+            <button class="btn btn-sm bg-violet side-bar-btn">
+              <span>Decline</span>
+              <img src="assets/check-square.svg" alt="check" class="side-bar-btn-icon" />
+            </button>
+            <button class="btn btn-sm bg-brown side-bar-btn">
+              <span>Aged</span>
+              <img src="assets/check-square.svg" alt="check" class="side-bar-btn-icon" />
+            </button>
+          </div>
+        </div>
+        <!--Side bar end-->
+      </div>
+    </div>
+    <!--Page content container end-->
   </body>
 </html>

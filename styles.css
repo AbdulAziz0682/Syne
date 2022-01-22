@@ -17,9 +17,6 @@
   display: flex;
   flex-direction: column;
 }
-.bg-blue {
-  background-color: #1D6598;
-}
 @media screen and (min-width: 0px) { /* For small screens */
   .login-form {
     min-width: 95%;
