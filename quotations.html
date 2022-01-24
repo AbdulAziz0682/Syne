@@ -7,7 +7,7 @@
     <title>Syne</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/dist/bootstrap-custom-theme.min.css">
     <!-- jQuery 3.5.1 library -->
     <script src="jquery/dist/jquery.slim.min.js"></script>
     <!-- Popper JS 1.16.1 -->
@@ -29,13 +29,22 @@
         background-color: #1D6598;
         color: white;
       }
+      .bg-blue:hover {
+        color: white !important;
+      }
       .bg-violet {
         background: rgba(202, 84, 168, 1);
         color: white;
       }
+      .bg-violet:hover {
+        color: white !important;
+      }
       .bg-brown {
         background: rgba(153, 152, 104, 1);
         color: white;
+      }
+      .bg-brown:hover {
+        color: white !important;
       }
       .side-bar-btn {
         width: 100%;
@@ -46,6 +55,27 @@
       .side-bar-btn-icon {
         width: 18px;
         height: 18px;
+      }
+      /* All select tags with class status */
+      .status {
+        min-width: 110px;
+      }
+      .status[value="Draft"] {
+        background-color: #6c757d; /* Secondary */
+      }
+      .status[value="Sent"] {
+        background-color: #1D6598; /* Primary */
+      }
+      .status[value="Accepted"] {
+        background-color: #00A35D; /* Success */
+      }
+      .status[value="Declined"] {
+        @apply
+          bg-violet
+      }
+      .status[value="Aged"] {
+        @apply
+          bg-brown
       }
     </style>
   </head>
@@ -158,9 +188,9 @@
             <div class="col-7 col-md-4 pt-2 col-lg-2 col-xl-1">
               <div class="d-flex justify-content-end align-items-center" style="gap: 0.5rem">
                 <!--Calendar Icon-->
-                <i class="fas fa-calendar-alt" style="font-size: 1rem;"></i>
+                <i class="fas fa-calendar-alt text-primary" style="font-size: 1rem;"></i>
                 <!--Date input-->
-                <input type="text" class="form-control" style="width: 90%;" />
+                <input type="text" class="form-control" placeholder="12/20/21" style="width: 90%; min-width: 90px;" />
               </div>
             </div>
             <!--Other Buttons visible only on lg screen-->
@@ -222,8 +252,8 @@
     <div class="container-fluid h-100">
       <div class="row h-100">
         <!--Side bar start-->
-        <div class="col-2 border rounded">
-          <div class="d-flex flex-column p-2" style="gap: 0.75rem;">
+        <div class="col-4 col-md-2 border rounded px-0">
+          <div class="d-flex flex-column" style="gap: 0.75rem; padding: 0.5rem;">
             <button class="btn btn-sm btn-primary w-100">+ Add New Quote</button>
             <br />
             <button class="btn btn-sm btn-secondary side-bar-btn">
@@ -249,8 +279,222 @@
           </div>
         </div>
         <!--Side bar end-->
+        <!--Page content table-->
+        <div class="col-8 col-md-10">
+          <table class="table table-striped table-responsive-xl">
+            <thead class="bg-primary text-white w-100">
+              <tr>
+                <th scope="col">Status</th>
+                <th scope="col">Quote No.</th>
+                <th scope="col">Date</th>
+                <th scope="col">Company</th>
+                <th scope="col">Description</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Linked Job</th>
+                <th scope="col">Net</th>
+                <th scope="col">Tax</th>
+                <th scope="col">Total</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="font-weight-bold text-secondary">
+              <tr>
+                <td scope="row">
+                  <!--Status-->
+                  <div class="form-group w-100">
+                    <select value="Draft" class="form-control text-white status">
+                      <option value="Draft" selected class="bg-secondary">Draft</option>
+                      <option value="Sent" class="bg-primary">Sent</option>
+                      <option value="Accepted" class="bg-success">Accepted</option>
+                      <option value="Declined" class="bg-violet">Declined</option>
+                      <option value="Aged" class="bg-brown">Aged</option>
+                    </select>
+                  </div>
+                </td>
+                <td>Q3766</td>
+                <td>12 / 12 / 19</td>
+                <td class="text-uppercase">Ricoh(Merstham)</td>
+                <td>Arts forum Dec Exhibition</td>
+                <td>Ben Hartley</td>
+                <td class="text-warning">Job00345</td>
+                <td>&euro;222.45</td>
+                <td>&euro;222.45</td>
+                <td>&euro;222.45</td>
+                <td>
+                  <input type="radio" class="bg-secondary" />
+                  &nbsp;X
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">
+                  <!--Status-->
+                  <div class="form-group w-100">
+                    <select value="Sent" class="form-control text-white status">
+                      <option value="Draft" class="bg-secondary">Draft</option>
+                      <option value="Sent" selected class="bg-primary">Sent</option>
+                      <option value="Accepted" class="bg-success">Accepted</option>
+                      <option value="Declined" class="bg-violet">Declined</option>
+                      <option value="Aged" class="bg-brown">Aged</option>
+                    </select>
+                  </div>
+                </td>
+                <td>Q3766</td>
+                <td>12 / 12 / 19</td>
+                <td class="text-uppercase">Ricoh(Merstham)</td>
+                <td>Arts forum Dec Exhibition</td>
+                <td>Ben Hartley</td>
+                <td class="text-warning">Job00345</td>
+                <td>&euro;222.45</td>
+                <td>&euro;222.45</td>
+                <td>&euro;222.45</td>
+                <td>
+                  <input type="radio" class="bg-secondary" />
+                  &nbsp;X
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">
+                  <!--Status-->
+                  <div class="form-group w-100">
+                    <select value="Draft" class="form-control text-white status">
+                      <option value="Draft" selected class="bg-secondary">Draft</option>
+                      <option value="Sent" class="bg-primary">Sent</option>
+                      <option value="Accepted" class="bg-success">Accepted</option>
+                      <option value="Declined" class="bg-violet">Declined</option>
+                      <option value="Aged" class="bg-brown">Aged</option>
+                    </select>
+                  </div>
+                </td>
+                <td>Q3766</td>
+                <td>12 / 12 / 19</td>
+                <td class="text-uppercase">Ricoh(Merstham)</td>
+                <td>Arts forum Dec Exhibition</td>
+                <td>Ben Hartley</td>
+                <td class="text-warning">Job00345</td>
+                <td>&euro;222.45</td>
+                <td>&euro;222.45</td>
+                <td>&euro;222.45</td>
+                <td>
+                  <input type="radio" class="bg-secondary" />
+                  &nbsp;X
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">
+                  <!--Status-->
+                  <div class="form-group w-100">
+                    <select value="Accepted" class="form-control text-white status">
+                      <option value="Draft" class="bg-secondary">Draft</option>
+                      <option value="Sent" class="bg-primary">Sent</option>
+                      <option value="Accepted" selected class="bg-success">Accepted</option>
+                      <option value="Declined" class="bg-violet">Declined</option>
+                      <option value="Aged" class="bg-brown">Aged</option>
+                    </select>
+                  </div>
+                </td>
+                <td>Q3766</td>
+                <td>12 / 12 / 19</td>
+                <td class="text-uppercase">Ricoh(Merstham)</td>
+                <td>Arts forum Dec Exhibition</td>
+                <td>Ben Hartley</td>
+                <td class="text-warning">Job00345</td>
+                <td>&euro;222.45</td>
+                <td>&euro;222.45</td>
+                <td>&euro;222.45</td>
+                <td>
+                  <input type="radio" class="bg-secondary" />
+                  &nbsp;X
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">
+                  <!--Status-->
+                  <div class="form-group w-100">
+                    <select value="Draft" class="form-control text-white status">
+                      <option value="Draft" class="bg-secondary">Draft</option>
+                      <option value="Sent" class="bg-primary">Sent</option>
+                      <option value="Accepted" class="bg-success">Accepted</option>
+                      <option value="Declined" selected class="bg-violet">Declined</option>
+                      <option value="Aged" class="bg-brown">Aged</option>
+                    </select>
+                  </div>
+                </td>
+                <td>Q3766</td>
+                <td>12 / 12 / 19</td>
+                <td class="text-uppercase">Ricoh(Merstham)</td>
+                <td>Arts forum Dec Exhibition</td>
+                <td>Ben Hartley</td>
+                <td class="text-warning">Job00345</td>
+                <td>&euro;222.45</td>
+                <td>&euro;222.45</td>
+                <td>&euro;222.45</td>
+                <td>
+                  <input type="radio" class="bg-secondary" />
+                  &nbsp;X
+                </td>
+              </tr>
+              <tr class="bg-light border-bottom border-secondary">
+                <!--Pagination Component-->
+                <td colspan="11" class="pb-0" style="gap: 1rem;">
+                  <div class="w-100 d-flex" style="gap: 1rem;">
+                    <nav aria-label="Page navigation">
+                      <ul class="pagination pagination-sm">
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                        <li class="page-item"><a class="page-link" href="#">8</a></li>
+                        <li class="page-item"><a class="page-link" href="#">9</a></li>
+                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <div class="form-group row ml-3 align-items-center input-group-sm">
+                      <select class="form-control col" id="inputGroupSelect03" style="max-width: 65px;">
+                        <option value="100">100</option>
+                        <option value="90">90</option>
+                        <option value="80">80</option>
+                        <option value="70">70</option>
+                        <option value="60">60</option>
+                        <option value="50">50</option>
+                        <option value="40">40</option>
+                        <option value="30">30</option>
+                        <option value="20">20</option>
+                        <option value="10">10</option>
+                      </select>
+                      <label class="form-control-label font-weight-light col mb-0" style="font-size: 11px; width: 150px;">Items per page</label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--Page content table end-->
       </div>
     </div>
     <!--Page content container end-->
+    <!--Div for separating footer-->
+    <div class="container-fluid mt-auto" style="min-height: 50px;"></div>
+    <!--Footer start-->
+    <div class="container-fluid bg-primary" style="min-height: 50px;">
+      <div class="row justify-content-between align-items-center font-weight-bold text-white h-100">
+        <div class="col-8">Company Name - 2022</div>
+        <div class="col-2 text-right">UD</div>
+      </div>
+    </div>
+    <!--Footer end-->
   </body>
 </html>
