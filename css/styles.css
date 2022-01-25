@@ -1,4 +1,3 @@
-
 .login-container {
   height: 100vh;
   width: 100vw;
@@ -17,6 +16,76 @@
   display: flex;
   flex-direction: column;
 }
+
+.page-layout { /* Layout for regular pages except login and reset password */
+  height: 100vh;
+  border: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.bg-blue {
+  background-color: #1D6598;
+  color: white;
+}
+.bg-blue:hover {
+  color: white !important;
+}
+.bg-violet {
+  background: rgba(202, 84, 168, 1);
+  color: white;
+}
+.bg-violet:hover {
+  color: white !important;
+}
+.bg-brown {
+  background: rgba(153, 152, 104, 1);
+  color: white;
+}
+.bg-brown:hover {
+  color: white !important;
+}
+
+/* flex or grid gap utitlites */
+.gap-0\.5 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-1\.5 {
+  gap: 1.5rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+/* All select tags with class status */
+.status {
+  min-width: 110px;
+}
+.status[value="Draft"] {
+  background-color: #6c757d !important; /* Secondary */
+}
+.status[value="Sent"] {
+  background-color: #1D6598 !important; /* Primary */
+}
+.status[value="Accepted"] {
+  background-color: #00A35D !important; /* Success */
+}
+.status[value="Declined"] {
+  @apply
+    bg-violet !important
+}
+.status[value="Aged"] {
+  @apply
+    bg-brown !important
+}
+
+/* Custom styles for different media queries */
 @media screen and (min-width: 0px) { /* For small screens */
   .login-form {
     min-width: 95%;
